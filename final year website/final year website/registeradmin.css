@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.lab1{
+    color: #fff;
+  font-size: 27px;
+  font-weight: 600;
+  margin-right: 30%;
+  text-decoration: none;
+  }
+nav{
+ position: fixed;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 75px;
+ background: #ffffff;
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ z-index: 2;
+}
+nav .navbar{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 100%;
+ max-width: 90%;
+ background: #395a45;
+ margin: auto;
+}
+nav .navbar .logo a{
+  color: #fff;
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav .navbar .menu{
+  display: flex;
+}
+.navbar .menu li{
+  list-style: none;
+  margin: 0 15px;
+}
+.navbar .menu li a{
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+}
+section{
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  color: #4c925d;
+  font-size: 50px;
+
+}
+.button a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #56c856;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+}
+a:hover {
+    background-color: rgb(64, 165, 115);
+    
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #61a36b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+    
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover #home{background-color: #3e8e41;}
+    /*.active {
+      font-weight: bold;
+      color: rgb(35, 13, 159);
+    }*/
+   
+/* Add existing CSS styles here */
+/* Drawer Styles */
+.menu-icon {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15%;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5%;
+    list-style: none;
+    gap: 2.0em;
+    position: fixed;
+    top: 0%;
+    right: -300px; /* Initially hidden on the right side */
+    width: 300px; /* Adjust the width as per your needs */
+    height: 100%;
+    background-color: #395a45;
+    z-index: 999;
+    transition: all 0.3s ease;
+  }
+  .menu.show {
+    right: 0; /* Slide in from the right side */
+  }
+  .menu li {
+    margin-top: 20px;
+    font-size: 28px;
+  }
+  .menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+  }
+  .menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  /* Added styles for the drawer */
+  .menu.show {
+    background-color: #395a45;
+  }
+}
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -320px; /* Start off-screen */
+  width: 320px;
+  height: 100vh;
+  background-color: #395a45;
+  transition: right 0.3s ease-in-out;
+}
+.show {
+  right: 0; /* Slide in from the right */
+} 
+
+/* Menu Icon Styles */
+.menu-icon .burger {
+width: 30px;
+height: 30px;
+display: flex;
+background: #395a45;
+flex-direction: column;
+justify-content: space-between;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.menu-icon .line {
+width: 100%;
+height: 5px;
+background-color: #929292;
+transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animate the burger menu icon into an 'X' when the menu is open */
+.menu-icon.open .line:nth-child(1) {
+transform: translateY(6px) rotate(45deg);
+}
+
+.menu-icon.open .line:nth-child(2) {
+opacity: 0;
+}
+
+.menu-icon.open .line:nth-child(3) {
+transform: translateY(-6px) rotate(-45deg);
+}
+.navbar-logo {
+justify-content: space-between;
+background-color: var(--navbar-text-color-focus);
+border-radius: 50%;
+width: 60px;
+height: 60px;
+margin-left: -114%;
+overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+.navbar-logo img {
+width: 100%; /* Make the image fill the container */
+height: 100%;
+object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+
+
+/* top  card data*/
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    animation: fade-in 0.5s ease-in-out;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  
+  .btn {
+    background-color: #395a45;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  p a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  p a:hover {
+    color: #45a049;
+  }
+  button {
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+	border-radius: 0px;
+	border: 1px solid #395a45;
+	background-color: #395a45;
+	color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+	transition: transform 80ms ease-in;
+}

@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.cardviews{
+    top: 75px;
+    position: relative;
+    padding-top: 10%;   
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    margin-top: 10%;
+    z-index: 1;
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+p1{
+    font-size: 45px;
+    font-weight: 600;
+    max-width: 100%;
+   text-shadow: #0bdb57;
+   font-family: "Lucida Calligraphy", "Courier New", monospace;
+   margin-left: 1%;
+   width: 600px;
+   color: #61a36b;
+}
+  .card1 {
+    padding-left: 10%;
+    flex-direction: row;
+  }
+  .card2,.card3{
+    padding-left: 0%;
+    padding-top: 0%;
+    flex-direction: row;
+  }
+  .card3{
+   padding-right: 4%;
+  }
+  .card4 {
+      padding: 14%;
+      padding-left: 25%;
+      padding-top: 2%;
+      padding-right: 2%;
+      flex-direction: column;
+  }
+  
+  .card5 {
+    padding-left: 0%;
+    padding-right: 17%;
+    padding-top: 2%;
+    flex-direction: row;
+  }
+  
+  .card {
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+  }
+  
+  .card:hover {
+    height: 450px;
+  }
+  
+  .imgBx {
+    position: absolute;
+    left: 50%;
+    top: -20%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .card:hover .imgBx {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  
+  .card .content .details {
+    padding: 5%;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    
+    overflow: hidden;
+  }
+  .card1 .card .content .details {
+      padding: 0%;
+      transform: translateY(230px);
+    }
+  .card2 .card .content .details {
+    padding: 0%;
+      transform: translateY(220px);
+    }
+    .card3 .card .content .details {
+      padding: 0%;
+      transform: translateY(180px);
+    }
+    .card4 .card .content .details {
+        transform: translateY(210px);
+      }
+      .card5 .card .content .details {
+        transform: translateY(210px);
+      }
+  .card:hover .content .details {
+    transform: translateY(0px);
+  }
+  
+  .card .content .details h2 {
+    font-size: 0.50em;
+    font-weight: 500;
+    color: black;
+    line-height: 1.0em;
+  }
+  
+  .card .content .details h2 span {
+    font-size: 0.5em;
+    font-weight: 300;
+    opacity: 1.0;
+    line-height: 0.2em;
+    justify-content: center;
+  }
+  
+  .card .content .details .ActionBtn {
+    display: block;
+    justify-content: center;
+    padding-bottom: 2%;
+  }
+  
+  .card .content .details .ActionBtn button {
+    padding: 3%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 0.25em;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+  }
+  .card1 .card .content .details .ActionBtn button{
+      
+      background:  rgb(11, 16, 97);
+  }
+  .card2 .card .content .details .ActionBtn button{
+      
+      background:  rgb(6, 205, 227);
+  }
+  .card3 .card .content .details .ActionBtn button{
+      
+      background:  rgb(6, 230, 88);
+  }
+  .card4 .card .content .details .ActionBtn button{
+      
+      background:  rgb(97, 180, 79);
+  }
+  .card5 .card .content .details .ActionBtn button{
+      
+      background:  rgb(3, 243, 251);
+  }
+  /* Media Queries */
+  @media(max-width: 800px){
+    .card-container{
+      width: 100%;
+      margin-bottom: 30px;
+  }
+  .card{
+    width: 50%;
+    margin-bottom: 30%;
+  }
+  }
+  @media(max-width: 574px){
+    .card-container{
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: auto;
+    width: 50%;
+   
+  }
+  .cardviews{
+    top: 75px;
+    position: relative;
+    padding-top: 30%;   
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    margin-top: 10%;
+    margin-bottom: 210%;
+    z-index: 1;
+  }
+  .card1 {
+    padding-top: 380%;
+    padding-left: 130%;
+    flex-direction: column;
+  }
+  .card2 {
+    padding-top: 3%;
+    padding-left: 130%;
+    flex-direction: column;
+  }
+  .card3 {
+    padding-top: 3%;
+    padding-left: 130%;
+    flex-direction: column;
+  }
+  .card4 {
+    padding-top: 3%;
+    padding-left: 130%;
+    flex-direction: column;
+  }
+  .card5 {
+    padding-top: 3%;
+    padding-left: 130%;
+    flex-direction: column;
+  }
+  .card {
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+  }
+  
+  .card:hover {
+    height: 450px;
+  }
+  }
+  .slg{
+    width: 100%;
+     height: 70vh;
+     padding-left: 5%;
+     margin-top: 10%;
+     text-align: left;
+     display: flex;
+     font-family: "Lucida Console", "Courier New", monospace;
+     justify-content: space-between(-15px);
+ }
+ .slogan{
+     font-size: 36px;
+     font-weight: 600;
+     max-width: 100%;
+     margin-right: 50%;
+    text-shadow: #0bdb57;
+    
+ }
+ p{
+     font-family: "Lucida Calligraphy", "Courier New", monospace;
+     margin-left: 1%;
+     width: 600px;
+ }
+ .home-image{
+   margin-top: -30%;
+     width: 70%;
+   margin-left: -40%;
+   height: 60%;
+   
+ }
+ #home {
+     background-color: #04AA6D;
+     color: white;
+     padding: 16px;
+     font-size: 16px;
+     border: none;
+   }
+  .lab1{
+    color: #fff;
+  font-size: 27px;
+  font-weight: 600;
+  margin-right: 35%;
+  text-decoration: none;
+  }
+nav{
+ position: fixed;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 75px;
+ background: #ffffff;
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ z-index: 2;
+}
+nav .navbar{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 100%;
+ max-width: 90%;
+ background: #395a45;
+ margin: auto;
+}
+nav .navbar .logo a{
+  color: #fff;
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav .navbar .menu{
+  display: flex;
+}
+.navbar .menu li{
+  list-style: none;
+  margin: 0 15px;
+}
+.navbar .menu li a{
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+}
+section{
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  color: #4c925d;
+  font-size: 50px;
+
+}
+.button a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #56c856;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+}
+a:hover {
+    background-color: rgb(64, 165, 115);
+    
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #61a36b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover #home{background-color: #3e8e41;}
+  .active {
+    font-weight: bold;
+    color: rgb(35, 13, 159);
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.blwfooter{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+  max-width: 1170px;
+  margin:0;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+    position:relative;
+  background: #395a45;
+    padding: 70px 0;
+    margin-top: 12%;
+}
+.footer-col{
+   width: 30%;
+   padding: 0 10px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #ffffff;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 1px;
+ 
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: hwb(0 100% 0% / 0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+.blwfooter{
+    margin-top: 230%;
+    padding:0;
+    box-sizing: border-box;
+}
+}
+/* Add your existing CSS styles here */
+/* Drawer Styles */
+.menu-icon {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 15%;
+    }
+    .menu {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 5%;
+      list-style: none;
+      gap: 2.0em;
+      position: fixed;
+      top: 0%;
+      right: -300px; /* Initially hidden on the right side */
+      width: 300px; /* Adjust the width as per your needs */
+      height: 100%;
+      background-color: #395a45;
+      z-index: 999;
+      transition: all 0.3s ease;
+    }
+    .menu.show {
+      right: 0; /* Slide in from the right side */
+    }
+    .menu li {
+      margin-top: 20px;
+      font-size: 28px;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+    }
+    .menu-icon {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    /* Added styles for the drawer */
+    .menu.show {
+      background-color: #395a45;
+    }
+  }
+  .drawer {
+    position: fixed;
+    top: 0;
+    right: -320px; /* Start off-screen */
+    width: 320px;
+    height: 100vh;
+    background-color: #395a45;
+    transition: right 0.3s ease-in-out;
+  }
+  .show {
+    right: 0; /* Slide in from the right */
+  } 
+
+/* Menu Icon Styles */
+.menu-icon .burger {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  background: #395a45;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.menu-icon .line {
+  width: 100%;
+  height: 5px;
+  background-color: #929292;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animate the burger menu icon into an 'X' when the menu is open */
+.menu-icon.open .line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-icon.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open .line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+.navbar-logo {
+  justify-content: space-between;
+  background-color: var(--navbar-text-color-focus);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: -114%;
+  overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+.navbar-logo img {
+  width: 100%; /* Make the image fill the container */
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+

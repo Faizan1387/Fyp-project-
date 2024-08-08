@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emissi Guard|Softwares</title>
+    <link rel="stylesheet" href="software.css">
+    <link rel="stylesheet" href="downloadpdf.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+<body>
+  <nav>
+
+    <div class="navbar">
+      <div class="logo">
+        <a href="#">
+          <div class="navbar-logo">
+            <img src="logo.png" alt="Logo">
+          </div>
+        </a>
+      </div>
+      <label class="lab1">Emissi Guard</label>
+      <div class="menu-icon" onclick="toggleDrawer()">
+        <button class="drawer-btn">
+          <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </button>
+      </div>
+      <ul class="menu" id="menu">
+        <div class="dropdown">
+          <li><a href="home.html">Home</a> </li>
+        </div>
+        <li><a href="plevel.html">Pollution-level</a> </li>
+        <li><a href="Instructions.html">E care</a></li>
+        <li><a href="About.html">About us</a></li>
+
+        <div class="dropdown">
+          <li><a href="">Login</a></li>
+          <div class="dropdown-content">
+            <a href="logu.html">User</a>
+            <a href="log.html">Admin</a>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </nav>
+  </div>
+  <div class="ag-format-container">
+    <div class="ag-courses_box">
+      <div class="ag-courses_item">
+        <a href="#" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+  
+          <div class="ag-courses-item_title">
+            VScode&#160;used for web development
+          </div>
+        </a>
+      </div>
+  
+      <div class="ag-courses_item">
+        <a href="#" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+  
+          <div class="ag-courses-item_title">
+            Android Studio&#160; Mobile Application development
+          </div>
+        </a>
+      </div>
+  
+      <div class="ag-courses_item">
+        <a href="#" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+  
+          <div class="ag-courses-item_title">
+            Arduino IDE&#160;For coding of Hardware
+          </div>
+        </a>
+      </div>
+  
+      <div class="ag-courses_item">
+        <a href="#" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+  
+          <div class="ag-courses-item_title">
+            Firebase&#160;For Storing data
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+<div class="footerdaata">
+ <footer class="footer">
+  <div class="container">
+  <div class="row">
+  <div class="footer-col">
+  <h4>company</h4>
+  <ul>
+  <li><a href="About.html">About Us</a></li>
+  <li><a href="ourservices.html">our services</a></li>
+  <li><a href="Mission.html">Our mission</a></li>
+  <li><a href="Privacy.html">Privacy Policy</a></li>
+ </ul>
+  </div>
+  <div class="footer-col">
+  <h4>get help</h4>
+  <ul>
+  <li><a href="FAQ.html">FAQ</a></li>
+  <li><a href="Disclaimer.html">Disclaimer</a></li>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="pollution-levels.html">Pollution-level</a></li>
+  </ul>
+  </div>
+  <div class="footer-col">
+  <h4>Technologies</h4>
+  <ul>
+  <li><a href="Hardware.html">Hardware</a></li>
+  <li><a href="Software.html">software</a></li>
+  <li><a href="Languages.html">Languages</a></li>
+   </ul>
+  </div>
+  <div class="footer-col">
+  <h4>Contact us</h4>
+  <div class="social-links">
+  <a href="#"><i class="fab fa-facebook-f"></i></a>
+  <a href="#"><i class="fab fa-twitter"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+  </div>
+  </div>
+  </div>
+  </footer>
+  </div>
+            <script>
+              function toggleDrawer() {
+                var menu = document.getElementById("menu");
+                menu.classList.toggle("show");
+              }
+              var menu = document.getElementById("menu");
+              var drawerBtn = document.querySelector(".drawer-btn");
+              function toggleDrawer() {
+                menu.classList.toggle("show");
+              }
+              function closeDrawer() {
+                menu.classList.remove("show");
+              }
+              document.addEventListener("click", function (event) {
+                var targetElement = event.target; // Clicked element
+                // Check if the clicked element is inside the drawer or the drawer button
+                var isDrawerElement = targetElement.closest("#menu") || targetElement.closest(".drawer-btn");
+          
+                if (!isDrawerElement) {
+                  closeDrawer(); // Close the drawer if the clicked element is outside
+                }
+              });
+            </script>
+</body>
+</html>

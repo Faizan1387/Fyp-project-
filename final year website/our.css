@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.lab1{
+  color: #fff;
+font-size: 27px;
+font-weight: 600;
+margin-right: 35%;
+text-decoration: none;
+}
+nav{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ }
+ nav .navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 90%;
+  background: #395a45;
+  margin: auto;
+ }
+ nav .navbar .logo a{
+   color: #fff;
+   font-size: 27px;
+   font-weight: 600;
+   text-decoration: none;
+ }
+ nav .navbar .menu{
+   display: flex;
+ }
+ .navbar .menu li{
+   list-style: none;
+   margin: 0 15px;
+ }
+ .navbar .menu li a{
+   color: #fff;
+   font-size: 17px;
+   font-weight: 500;
+   text-decoration: none;
+ }
+ section{
+   
+     
+   height: 100vh;
+   width: 100%;
+   align-items: center;
+   justify-content: space-between;
+   color: #4c925d;
+   font-size: 50px;
+ 
+ }
+ 
+ 
+ .button a{
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   color: #fff;
+   background: #56c856;
+   padding: 7px 12px;;
+   font-size: 18px;
+   border-radius: 6px;
+   box-shadow: rgba(0, 0, 0, 0.15);
+ }
+ 
+ a:hover {
+     background-color: rgb(64, 165, 115);
+     
+   }
+   .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #61a36b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover #home{background-color: #3e8e41;}
+  .active {
+    font-weight: bold;
+    color: rgb(35, 13, 159);
+  }
+   
+@import url("https://fonts.googleapis.com/css?family=Lato:700|Noticia+Text:400i&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  /* center the article in the viewport */
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  /* include an off-white background */
+  background: hsl(0, 0%, 100%);
+  /* add perspective for the rotation of the article, added through the script */
+  perspective: 500px;
+}
+.ar{
+  margin-top: 12%;
+  margin-bottom: 20%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+article {
+  /* limit the width of the article container */
+  width: 700px;
+  margin-top: 10%;
+  height: 800px;
+  /* display the contents in a column */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: hsl(0, 14%, 93%);
+  line-height: 2;
+  border-radius: 10px;
+  margin: 3rem;
+  /* transition for the transform property, updated in the script */
+  transition: transform 0.2s ease-out;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#ig1{
+  margin-top: -20%;
+  width: 30%;
+  height: 30%;
+}
+article div {
+  /* center the text in the div container */
+  text-align: center;
+  margin: 2rem;
+}
+article div p {
+  color: hsl(0, 0%, 0%);
+  font-weight: 500;
+  font-style: italic;
+  font-family: "Noticia Text", serif;
+  /* position relative for the pseudo element */
+  position:relative;
+  z-index: 5;
+justify-content: center;
+}
+article div p:before {
+  /* with SVG elements include two icons for the quote */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.05;
+  /* position the icons at either end of the paragraph, rotate the second to have a mirrorer image */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="70" height="70"><rect x="0" y="40" width="30" height="30"></rect><path d="M 0 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path><rect x="40" y="40" width="30" height="30"></rect><path d="M 40 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path></svg>'),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="70" height="70" transform="rotate(180)"><rect x="0" y="40" width="30" height="30"></rect><path d="M 0 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path><rect x="40" y="40" width="30" height="30"></rect><path d="M 40 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path></svg>');
+  background-position: 20% 20%, 80% 80%;
+  background-repeat: no-repeat;
+}
+article div h1 {
+  /* considerably reduce the size of the heading */
+  color: hsl(124, 45%, 44%);
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.ff{
+  position: relative;
+  width: 100%;
+  margin-left: -0%;
+  margin-top: 90%;
+  position: fixed;
+}
+.container{
+  max-width: 1170px;
+  margin:auto;
+  margin-left: -0%;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+  background-color: #395a45;
+    padding: 70px 0;
+    margin-top: 10%;
+}
+.footer-col{
+   width: 30%;
+   padding: 0 10px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #ffffff;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 1px;
+ 
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: hwb(0 100% 0% / 0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media (max-width: 1200px) {
+  article {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    display: block;
+    padding: 10px;
+  }
+
+  .ar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  article {
+    width: 100%;
+    height: auto;
+    margin-top: 60px; /* Adjusted margin to avoid collision with navigation bar */
+    margin-bottom: 20px;
+  }
+
+  article figure {
+    width: 80%; /* Adjusted width for small screens */
+    max-height: 200px; /* Adjusted max-height for small screens */
+  }
+
+  article figure:before {
+    top: 75%;
+  }
+
+  article div {
+    margin: 1rem;
+  }
+
+  article div p {
+    font-size: 16px;
+  }
+
+  article div h1 {
+    font-size: 1.5rem;
+  }
+
+  .ff {
+    margin-top: 10px;
+    position: static;
+  }
+}
+
+/* Footer Responsive Styles */
+@media (max-width: 767px) {
+  .footer-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* Add your existing CSS styles here */
+/* Drawer Styles */
+.menu-icon {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15%;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5%;
+    list-style: none;
+    gap: 2.0em;
+    position: fixed;
+    top: 0%;
+    right: -300px; /* Initially hidden on the right side */
+    width: 300px; /* Adjust the width as per your needs */
+    height: 100%;
+    background-color: #395a45;
+    z-index: 999;
+    transition: all 0.3s ease;
+  }
+  .menu.show {
+    right: 0; /* Slide in from the right side */
+  }
+  .menu li {
+    margin-top: 20px;
+    font-size: 28px;
+  }
+  .menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+  }
+  .menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  /* Added styles for the drawer */
+  .menu.show {
+    background-color: #395a45;
+  }
+}
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -320px; /* Start off-screen */
+  width: 320px;
+  height: 100vh;
+  background-color: #395a45;
+  transition: right 0.3s ease-in-out;
+}
+.show {
+  right: 0; /* Slide in from the right */
+} 
+
+/* Menu Icon Styles */
+.menu-icon .burger {
+width: 30px;
+height: 30px;
+display: flex;
+background: #395a45;
+flex-direction: column;
+justify-content: space-between;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.menu-icon .line {
+width: 100%;
+height: 5px;
+background-color: #929292;
+transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animate the burger menu icon into an 'X' when the menu is open */
+.menu-icon.open .line:nth-child(1) {
+transform: translateY(6px) rotate(45deg);
+}
+
+.menu-icon.open .line:nth-child(2) {
+opacity: 0;
+}
+
+.menu-icon.open .line:nth-child(3) {
+transform: translateY(-6px) rotate(-45deg);
+}
+.navbar-logo {
+justify-content: space-between;
+background-color: var(--navbar-text-color-focus);
+border-radius: 50%;
+width: 60px;
+height: 60px;
+margin-left: -114%;
+overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+.navbar-logo img {
+width: 100%; /* Make the image fill the container */
+height: 100%;
+object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+

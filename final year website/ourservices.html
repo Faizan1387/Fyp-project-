@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emissi Guard|Our services</title>
+    <link rel="stylesheet" href="our.css">
+</head>
+<body>
+    <!-- markup structure
+article, wrapping container
+    figure, wrapping the image
+    div, wrapping container for a quote and  the name of the testimonial
+-->
+<nav>
+
+  <div class="navbar">
+    <div class="logo">
+      <a href="#">
+        <div class="navbar-logo">
+          <img src="logo.png" alt="Logo">
+        </div>
+      </a>
+    </div>
+    <label class="lab1">Emissi Guard</label>
+    <div class="menu-icon" onclick="toggleDrawer()">
+      <button class="drawer-btn">
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </button>
+    </div>
+    <ul class="menu" id="menu">
+      <div class="dropdown">
+        <li><a href="home.html">Home</a> </li>
+      </div>
+      <li><a href="plevel.html">Pollution-level</a> </li>
+      <li><a href="Instructions.html">E care</a></li>
+      <li><a href="About.html">About us</a></li>
+
+      <div class="dropdown">
+        <li><a href="">Login</a></li>
+          <div class="dropdown-content">
+            <a href="logu.html">User</a>
+            <a href="log.html">Admin</a>
+        </div>
+      </div>
+    </ul>
+  </div>
+</nav>
+</div>
+<div class="ar">
+<article>
+      <img src="service.png" id="ig1">
+
+    <div>
+        
+            <h1>Real-time monitoring: </h1>
+         <p> The purposed system will provide real-time monitoring of vehicle emissions, allowing authorities to quickly identify areas with high levels of pollution and take action to reduce emissions</p>
+        <h1>
+        Alert system: 
+        </h1>
+        <p>The purposed system will be able to generate alerts when vehicles exceed predefined pollution limits, allowing authorities to take action against non-compliant vehicles.</p>
+<h1>Public awareness: </h1>
+<p>
+    The system should raise public awareness about the importance of reducing vehicle emissions and the impact of air pollution on health and the environment.
+    Improved air quality: The ultimate goal of the system is to improve air quality by reducing vehicle emissions and promoting the use of clean transportation technologies.
+    In summary, an IoT-based vehicle pollution monitoring and alert system can help reduce air pollution, ensure compliance with regulations, save costs, improve data collection, and future-proof the system for the adoption of cleaner vehicles. These justifications highlight the importance and necessity of developing and implementing such a system.
+    </p>
+
+    </div>
+</article>
+</div>
+<div class="ff">
+<footer class="footer">
+    <div class="container">
+     <div class="row">
+       <div class="footer-col">
+         <h4>company</h4>
+         <ul>
+           <li><a href="About.html">About Us</a></li>
+           <li><a href="ourservices.html">our services</a></li>
+           <li><a href="Mission.html">Our mission</a></li>
+           <li><a href="Privacy.html">Privacy Policy</a></li>
+           
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>get help</h4>
+         <ul>
+           <li><a href="FAQ.html">FAQ</a></li>
+           <li><a href="Disclaimer.html">Disclaimer</a></li>
+           <li><a href="home.html">Home</a></li>
+           <li><a href="plevel.html">Pollution-level</a></li>
+  
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>Technologies</h4>
+         <ul>
+           <li><a href="Hardware.html">Hardware</a></li>
+           <li><a href="Software.html">software</a></li>
+           <li><a href="Languages.html">Languages</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>Contact us</h4>
+         <div class="social-links">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-linkedin-in"></i></a>
+         </div>
+       </div>
+     </div>
+    </div>
+  </footer>
+</div>
+<script>
+  function toggleDrawer() {
+    var menu = document.getElementById("menu");
+    menu.classList.toggle("show");
+  }
+  var menu = document.getElementById("menu");
+  var drawerBtn = document.querySelector(".drawer-btn");
+  function toggleDrawer() {
+    menu.classList.toggle("show");
+  }
+  function closeDrawer() {
+    menu.classList.remove("show");
+  }
+  document.addEventListener("click", function (event) {
+    var targetElement = event.target; // Clicked element
+    // Check if the clicked element is inside the drawer or the drawer button
+    var isDrawerElement = targetElement.closest("#menu") || targetElement.closest(".drawer-btn");
+
+    if (!isDrawerElement) {
+      closeDrawer(); // Close the drawer if the clicked element is outside
+    }
+  });
+</script>
+</body>
+</html>

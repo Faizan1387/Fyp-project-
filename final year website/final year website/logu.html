@@ -1,0 +1,277 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Emissi Guard|User Login</title>
+
+  <link rel="stylesheet" href="./log.css">
+
+</head>
+
+<body>
+    <nav>
+
+        <div class="navbar">
+          <div class="logo">
+            <a href="#">
+              <div class="navbar-logo">
+                <img src="logo.png" alt="Logo">
+              </div>
+            </a>
+          </div>
+          <label class="lab1">Emissi Guard</label>
+          <div class="menu-icon" onclick="toggleDrawer()">
+            <button class="drawer-btn">
+              <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+            </button>
+          </div>
+          <ul class="menu" id="menu">
+            <div class="dropdown">
+              <li><a href="home.html">Home</a> </li>
+            </div>
+            <li><a href="plevel.html">Pollution-level</a> </li>
+            <li><a href="Instructions.html">E care</a></li>
+            <li><a href="About.html">About us</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                <span> use your email for registration</span>
+                <input type="text" id="username" placeholder="Name" required/>
+                <input type="email" id="email" placeholder="Email" required/>
+                <input type="password" id="password" placeholder="Password" required/>
+                <input type="password" id="re-password" placeholder="Confirm Password" required/>
+                <button type="submit" value="Sign Up">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form id="loginform" action="#">
+                <h1>Sign in</h1>
+                <span>Use your account</span>
+                <input type="email" id="loginEmail" placeholder="Email" required/>
+                <input type="password" id="loginPassword" placeholder="Password" required/>
+                <div class="passwordshow">
+                <input type="checkbox" id="ckbx" onclick="myFunction()">Show_password</div>
+                <a href="#" id="forgotPasswordLink" >Forgot your password?</a>
+                <button type="submit" value="Login">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Glad to see you. To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footerdaata">
+        <footer class="footer">
+          <div class="containerfoot">
+            <div class="row">
+              <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                  <li><a href="About.html">About Us</a></li>
+                  <li><a href="ourservices.html">our services</a></li>
+                  <li><a href="Mission.html">Our mission</a></li>
+                  <li><a href="Privacy.html">Privacy Policy</a></li>
+    
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                  <li><a href="FAQ.html">FAQ</a></li>
+                  <li><a href="Disclaimer.html">Disclaimer</a></li>
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="plevel.html">Pollution-level</a></li>
+    
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Technologies</h4>
+                <ul>
+                  <li><a href="Hardware.html">Hardware</a></li>
+                  <li><a href="Software.html">software</a></li>
+                  <li><a href="Languages.html">Languages</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Contact us</h4>
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    <script>
+      
+
+      //buttons data
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+  // Registration form submission
+document.getElementById("container").addEventListener("submit", function (event) {
+      event.preventDefault();
+      console.log("hello there");
+      var username = document.getElementById("username").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+     auth.createUserWithEmailAndPassword(email, password)
+        .then(function (userCredential) {
+          var user = userCredential.user;
+          console.log(user)
+          var userData = {
+            username: username,
+            email: email
+          };
+ 
+
+          firebase.database().ref("user_data/" + user.uid).set(userData)
+            .then(function () {
+              alert("Registration successful!");
+              window.location.href = "";
+            })
+            .catch(function (error) {
+              alert("Error saving user data: " + error.message);
+            });
+        })
+        .catch(function (error) {
+          alert("Registration failed. Error: " + error.message);
+        });
+    });
+});
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+  
+});
+    </script>
+    <script>
+        function toggleDrawer() {
+          var menu = document.getElementById("menu");
+          menu.classList.toggle("show");
+        }
+        var menu = document.getElementById("menu");
+        var drawerBtn = document.querySelector(".drawer-btn");
+        function toggleDrawer() {
+          menu.classList.toggle("show");
+        }
+        function closeDrawer() {
+          menu.classList.remove("show");
+        }
+        document.addEventListener("click", function (event) {
+          var targetElement = event.target; // Clicked element
+          // Check if the clicked element is inside the drawer or the drawer button
+          var isDrawerElement = targetElement.closest("#menu") || targetElement.closest(".drawer-btn");
+    
+          if (!isDrawerElement) {
+            closeDrawer(); // Close the drawer if the clicked element is outside
+          }
+        });
+
+//store data in cookies
+        document.getElementById("container").addEventListener("submit", function (event) {
+          event.preventDefault();
+          console.log("hello dude")
+          var email = document.getElementById("loginEmail").value;
+          var password = document.getElementById("loginPassword").value;
+  
+          auth.signInWithEmailAndPassword(email, password)
+            .then(function (userCredential) {
+              var user = userCredential.user;
+              var userRef = firebase.database().ref("user_data/" + user.uid);
+              userRef.on("value", function (snapshot) {
+            // Redirect to the About page
+                  window.location.href = "userdashboardpage.html";
+    
+              });
+            })
+            .catch(function (error) {
+              alert("Login failed. Error: " + error.message);
+            });
+
+          
+        });
+        function myFunction() {
+  var x = document.getElementById("loginPassword");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+      //data of cookies 
+      function setCookie(name, value, daysToExpire) {
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        function getCookies(name) {
+            var cookieName = name + "=";
+            var cookieArray = decodedCookie.split(';');
+            for (var i = 0; i < cookieArray.length; i++) {
+                var cookie = cookieArray[i];
+                while (cookie.charAt(0) === ' ') {
+                    cookie = cookie.substring(1);
+                }
+
+            }
+            return "";
+        }
+
+        function loadcookie() {
+            var usernameCookie = getCookies("email");
+            var passwordCookie = getCookies("password");
+        }
+
+        document.getElementById("forgotPasswordLink").addEventListener("click", function(event) {
+    event.preventDefault();
+    var email = document.getElementById("loginEmail").value;
+
+    // Initiate password reset process
+    auth.sendPasswordResetEmail(email)
+      .then(function() {
+        alert("Password reset email sent. Check your inbox.");
+      })
+      .catch(function(error) {
+        alert("Password reset email could not be sent. Error: " + error.message);
+      });
+  });
+
+      </script>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="firebase-config.js"></script>
+        
+</body>
+
+</html>

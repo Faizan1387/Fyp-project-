@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+  .css-slideshow {
+    position: relative;
+    max-width: 695px;
+    height: 470px;
+    margin-top: 10%;
+    margin-left: 25%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  .css-slideshow figure {
+    margin: 0;
+    max-width: 495px;
+    height: 370px;
+    background: #000;
+    position: absolute;
+  }
+  .css-slideshow img {
+    box-shadow: 0 0 2px #666;
+  }
+  .css-slideshow figcaption {
+    position: absolute;
+    top: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 0.8em;
+    padding: 8px 12px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .css-slideshow:hover figure figcaption {
+    transition: opacity 0.5s;
+    opacity: 1;
+  }
+  .css-slideshow-attr {
+    max-width: 495px;
+    text-align: right;
+    font-size: 0.7em;
+    font-style: italic;
+    margin: 0 auto;
+  }
+  .css-slideshow-attr a {
+    color: #666;
+  }
+  .css-slideshow figure {
+    opacity: 0;
+  }
+  figure:nth-child(1) {
+    animation: xfade 48s 42s infinite;
+  }
+  figure:nth-child(2) {
+    animation: xfade 48s 36s infinite;
+  }
+  figure:nth-child(3) {
+    animation: xfade 48s 30s infinite;
+  }
+  figure:nth-child(4) {
+    animation: xfade 48s 24s infinite;
+  }
+  figure:nth-child(5) {
+    animation: xfade 48s 18s infinite;
+  }
+  figure:nth-child(6) {
+    animation: xfade 48s 12s infinite;
+  }
+  figure:nth-child(7) {
+    animation: xfade 48s 6s infinite;
+  }
+  figure:nth-child(8) {
+    animation: xfade 48s 0s infinite;
+  }
+  
+  @keyframes xfade {
+    0% {
+      opacity: 1;
+    }
+    10.5% {
+      opacity: 1;
+    }
+    12.5% {
+      opacity: 0;
+    }
+    98% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .lab1{
+  color: #fff;
+  font-size: 27px;
+  font-weight: 600;
+  margin-right: 30%;
+  text-decoration: none;
+  }
+nav{
+ position: fixed;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 75px;
+ background: #ffffff;
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ z-index: 2;
+}
+nav .navbar{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 100%;
+ max-width: 90%;
+ background: #395a45;
+ margin: auto;
+}
+nav .navbar .logo a{
+  color: #fff;
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav .navbar .menu{
+  display: flex;
+}
+.navbar .menu li{
+  list-style: none;
+  margin: 0 15px;
+}
+.navbar .menu li a{
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+}
+section{
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  color: #4c925d;
+  font-size: 50px;
+
+}
+.button a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #56c856;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+}
+a:hover {
+    background-color: rgb(64, 165, 115);
+    
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #61a36b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover #home{background-color: #3e8e41;}
+  .active {
+    font-weight: bold;
+    color: rgb(35, 13, 159);
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.blwfooter{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+  max-width: 1170px;
+  margin:0;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+    position:relative;
+  background: #395a45;
+    padding: 70px 0;
+    margin-top: 12%;
+}
+.footer-col{
+   width: 30%;
+   padding: 0 10px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #ffffff;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 1px;
+ 
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: hwb(0 100% 0% / 0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+.blwfooter{
+    margin-top: 230%;
+    padding:0;
+    box-sizing: border-box;
+}
+}
+/* Add your existing CSS styles here */
+/* Drawer Styles */
+.menu-icon {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 15%;
+    }
+    .menu {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 5%;
+      list-style: none;
+      gap: 2.0em;
+      position: fixed;
+      top: 0%;
+      right: -300px; /* Initially hidden on the right side */
+      width: 300px; /* Adjust the width as per your needs */
+      height: 100%;
+      background-color: #395a45;
+      z-index: 999;
+      transition: all 0.3s ease;
+    }
+    .menu.show {
+      right: 0; /* Slide in from the right side */
+    }
+    .menu li {
+      margin-top: 20px;
+      font-size: 28px;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+    }
+    .menu-icon {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    /* Added styles for the drawer */
+    .menu.show {
+      background-color: #395a45;
+    }
+  }
+  .drawer {
+    position: fixed;
+    top: 0;
+    right: -320px; /* Start off-screen */
+    width: 320px;
+    height: 100vh;
+    background-color: #395a45;
+    transition: right 0.3s ease-in-out;
+  }
+  .show {
+    right: 0; /* Slide in from the right */
+  } 
+
+/* Menu Icon Styles */
+.menu-icon .burger {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  background: #395a45;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.menu-icon .line {
+  width: 100%;
+  height: 5px;
+  background-color: #929292;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animate the burger menu icon into an 'X' when the menu is open */
+.menu-icon.open .line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-icon.open .line:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.open .line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+.navbar-logo {
+  justify-content: space-between;
+  background-color: var(--navbar-text-color-focus);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: -114%;
+  overflow: hidden; /* Ensure the image doesn't overflow */
+}
+.navbar-logo img {
+  width: 100%; /* Make the image fill the container */
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+/*,,,,,,,,,,,,,,,*/
+/* CSS */
+.buttons{
+margin-top: 5%;
+margin-left: 13%;
+align-items: center;
+}
+.buttoncop {
+    height: 200px;
+    width: 200px;
+    margin-right: 5%;
+    margin-left: 5%;
+    --b: 3px;   /* border thickness */
+    --s: 1.45em; /* size of the corner */
+    --color: #395a45;
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  .buttoncop:hover,
+  .buttoncop:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+  }
+  
+  .buttoncop:active {
+    background: var(--color);
+    color: #fff;
+  }
+
+  button {
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+    border-radius: 0px;
+    border: 1px solid #395a45;
+    background-color: #395a45;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 500;
+    transition: transform 80ms ease-in;
+  }

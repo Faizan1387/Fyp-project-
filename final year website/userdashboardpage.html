@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emissi Guard|User Dashboard</title>
+    <link rel="stylesheet" href="userdashboardpage.css">
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <a href="#">
+            <div class="navbar-logo">
+              <img src="logo.png" alt="Logo">
+            </div>
+          </a>
+        </div>
+        <label class="lab1">Emissi Guard</label>
+        <div class="menu-icon" onclick="toggleDrawer()">
+          <button class="drawer-btn">
+            <div class="burger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </button>
+        </div>
+        <ul class="menu">
+          <div class="dropdown"> 
+            <li><a href="home.html">Home</a> </li>
+              </div>
+              <li><a href="plevel.html">Pollution-level</a> </li>
+              <li><a href="Instructions.html">E care</a></li>
+              <li><a href="About.html">About us</a></li> 
+              <button id="logoutBtn">Logout</button>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <div class="css-slideshow">
+        <figure>
+          <img src="air5.png" width="695" height="470" class="alignnone size-full wp-image-172" />
+          <figcaption><strong></strong>Rev Your Engine for Change: Trade Exhaust for Fresh Air, Drive Towards a Greener, Cleaner Future, and Let the Earth Breathe Anew!</figcaption>
+        </figure>
+        <figure>
+          <img src="air4.png" width="695" height="470"class="alignnone size-full wp-image-179" />
+          <figcaption><strong>Semantics:</strong> Pollution's Tailpipe Tale: Choose Electric Dreams Over Fossil Fuel Nightmares, Unleash a Clean Drive to Safeguard Our Planet's Air.</figcaption>
+        </figure>
+        <figure>
+          <img src="air3.png" width="695" height="470" class="alignnone size-large wp-image-178" />
+          <figcaption><strong>&amp;</strong>Join the Movement, Shift the Gear: Transform Roads into Avenues of Clean Air, Where Vehicles Whisper and Skies Shine Brighter.</figcaption>
+        </figure>
+        <figure>
+          <img src="air2.png" width="695" height="470" class="alignnone size-full wp-image-177" />
+          <figcaption><strong></strong>Leave No Footprints, Only Tire Tracks: Swap Smoke for Serenity, as Vehicles Become Partners in Preserving the Pristine Air We Cherish.&amp;</figcaption>
+        </figure>
+        <figure>
+          <img src="air1.png" width="695" height="470" class="alignnone size-large wp-image-176" />
+          <figcaption><strong>In the Race Against Air Pollution, Slow Down, Choose Wisely, and Pave the Way for Sustainable Mobility-Where Clean Air is the Finish Line!</strong></figcaption>
+        </figure>
+        <figure>
+          <img src="dwnpdf.png" width="695" height="470" class="alignnone size-large wp-image-175" />
+          <figcaption><strong>Multimedia:</strong> Audio and video are first class citizens in the HTML5 web, living in harmony with your apps and sites. Lights, camera, action!</figcaption>
+        </figure>
+        <figure>
+          <img src="cop1.png" width="695" height="470" class="alignnone size-large wp-image-174" />
+          <figcaption><strong>Complain to Admin &amp;</strong> If you face any kind of issue regarding Hardware(gas sensors), mobile application or website, Complain to admin by clicking on Compalin to admin button and fill out the required form.</figcaption>
+        </figure>
+        <figure>
+          <img src="rqstinfo.png" width="695" height="470" class="alignnone size-large wp-image-173" />
+          <figcaption><strong>Request to admin to change personal information &amp;</strong> If you want to change your personal infomation then just click on Request to Change Personal information button and fill the form and click on submit.</figcaption>
+        </figure>
+      </div>
+     <div class="buttons">
+<button class="buttoncop" onclick="redirectToinfochange() " role="button">Requst to change Personal info</button>
+<button class="buttoncop" onclick="redirectTodow()"  role="button">Download Your data</button>
+<button class="buttoncop" onclick="redirectToComplaintPage()"  role="button">File a Complain</button>
+     </div>
+       <div class="footerdaata">
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="About.html">About Us</a></li>
+              <li><a href="ourservices.html">our services</a></li>
+              <li><a href="Mission.html">Our mission</a></li>
+              <li><a href="Privacy.html">Privacy Policy</a></li>
+
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="FAQ.html">FAQ</a></li>
+              <li><a href="Disclaimer.html">Disclaimer</a></li>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="plevel.html">Pollution-level</a></li>
+
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Technologies</h4>
+            <ul>
+              <li><a href="Hardware.html">Hardware</a></li>
+              <li><a href="Software.html">software</a></li>
+              <li><a href="Languages.html">Languages</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+document.getElementById("logoutBtn").addEventListener("click", function() {
+          firebase.auth().signOut().then(function() {
+            window.location.href = "logu.html";
+          }).catch(function(error) {
+            console.log("Logout failed. Error: " + error.message);
+          });
+          document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        });
+
+ firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+         document.getElementById("userEmail").innerText = user.email;
+        updateNavigationBar(user.email);
+        loadUsersWithHighNotificationCounts();
+      } else {
+        // User is not signed in, redirect to login page
+        window.location.href = "logu.html";
+      }
+    });
+    function toggleDrawer() {
+      var menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+    var menu = document.getElementById("menu");
+    var drawerBtn = document.querySelector(".drawer-btn");
+    function toggleDrawer() {
+      menu.classList.toggle("show");
+    }
+    function closeDrawer() {
+      menu.classList.remove("show");
+    }
+    document.addEventListener("click", function (event) {
+      var targetElement = event.target; // Clicked element
+      // Check if the clicked element is inside the drawer or the drawer button
+      var isDrawerElement = targetElement.closest("#menu") || targetElement.closest(".drawer-btn");
+
+      if (!isDrawerElement) {
+        closeDrawer(); // Close the drawer if the clicked element is outside
+      }
+    });
+    function redirectToComplaintPage() {
+    window.location.href = 'complain.html';
+  }
+  function redirectTodow() {
+    window.location.href = 'downloadpdf.html';
+  }
+  function redirectToinfochange() {
+    window.location.href = 'infochange.html';
+  }
+  document.getElementById("logoutBtn").addEventListener("click", function() {
+      firebase.auth().signOut().then(function() {
+        window.location.href = "logu.html";
+      }).catch(function(error) {
+        console.log("Logout failed. Error: " + error.message);
+      });
+    });
+
+
+    //logut handle 
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+            document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            // Redirect to the login page or another appropriate page
+            window.location.href = "logu.html";
+        });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emissi Guard|Download data</title>
+  <link rel="stylesheet" href="downloadpdf.css">
+
+  <style>
+    .dwcard{
+      width: 80%;
+      height: 100vh;
+      margin-left: 10%;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+    .PdfDownload {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+
+    .center-content {
+      text-align: center;
+    }
+
+    .input-container {
+      margin-bottom: 10px;
+    }
+
+    #userEmail {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      max-width: 300px;
+      box-sizing: border-box;
+    }
+
+    #downloadBtn {
+      padding: 10px 20px;
+      background-color: #395a45;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #downloadBtn:hover {
+      background-color: #395a45;
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="#">
+          <div class="navbar-logo">
+            <img src="logo.png" alt="Logo">
+          </div>
+        </a>
+      </div>
+      <label class="lab1">Emissi Guard</label>
+      <div class="menu-icon" onclick="toggleDrawer()">
+        <button class="drawer-btn">
+          <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </button>
+      </div>
+      <ul class="menu">
+        <div class="dropdown"> 
+          <li><a href="home.html">Home</a> </li>
+            </div>
+            <li><a href="plevel.html">Pollution-level</a> </li>
+            <li><a href="Instructions.html">E care</a></li>
+            <li><a href="About.html">About us</a></li> 
+            <button id="logoutBtn">Logout</button>
+      </ul>
+    </div>
+  </nav>
+<div class="dwcard">
+
+  <div class="PdfDownload">
+    <div class="center-content">
+      <h1>Download Your Previous History</h1>
+      <div class="input-container">
+        <input type="email" id="userEmail" placeholder="Enter your email">
+      </div>
+      <button id="downloadBtn">Download History as PDF</button>
+    </div>
+  </div>
+
+  </div>
+</div>
+  <div class="footerdaata">
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="About.html">About Us</a></li>
+              <li><a href="ourservices.html">our services</a></li>
+              <li><a href="Mission.html">Our mission</a></li>
+              <li><a href="Privacy.html">Privacy Policy</a></li>
+
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="FAQ.html">FAQ</a></li>
+              <li><a href="Disclaimer.html">Disclaimer</a></li>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="plevel.html">Pollution-level</a></li>
+
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Technologies</h4>
+            <ul>
+              <li><a href="Hardware.html">Hardware</a></li>
+              <li><a href="Software.html">software</a></li>
+              <li><a href="Languages.html">Languages</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="  https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+ document.getElementById("logoutBtn").addEventListener("click", function() {
+          firebase.auth().signOut().then(function() {
+            window.location.href = "logu.html";
+          }).catch(function(error) {
+            console.log("Logout failed. Error: " + error.message);
+          });
+        });
+    document.addEventListener("DOMContentLoaded", function () {
+      console.log("tempoo")
+      const downloadBtn = document.getElementById("downloadBtn");
+      const userEmailInput = document.getElementById("userEmail");
+
+      downloadBtn.addEventListener("click", async () => {
+        const userEmail = userEmailInput.value;
+        await fetchAndDownloadHistoryByEmail(userEmail);
+      });
+
+      async function fetchAndDownloadHistoryByEmail(userEmail) {
+        var historyRef = firebase.database().ref("History");
+
+        historyRef.orderByChild("email").equalTo(userEmail).once("value")
+          .then(function (snapshot) {
+            var userHistory = [];
+
+            if (userHistory.length > 0) {
+              generateAndDownloadPdf(userEmail, userHistory);
+            } else {
+              console.log("No history found for the given email.");
+              
+            }
+          })
+          .catch(function (error) {
+            console.log("Error fetching history by email: " + error.message);
+          });
+      }
+
+      async function generateAndDownloadPdf(userEmail, userHistory) {
+
+        // Set font
+        const font = await pdfDoc.embedFont(PDFLib.StandardFonts.Helvetica);
+        page.setFont(font);
+
+        // Set title
+        page.drawText("User History Report", { x: 50, y: page.getHeight() - 50, size: 20 });
+
+        const colWidths = [100, 100, 100, 150]; // Adjust column widths as needed
+        const columnHeaderHeight = 30;
+
+        // Draw table header
+        page.drawText("User Name", { x: tableX, y: tableY - columnHeaderHeight, size: 14 });
+        page.drawText("Email", { x: tableX + colWidths[0], y: tableY - columnHeaderHeight, size: 14 });
+        page.drawText("Notification Count", { x: tableX + colWidths[0] + colWidths[1], y: tableY - columnHeaderHeight, size: 14 });
+        page.drawText("Issue Resolved Date", { x: tableX + colWidths[0] + colWidths[1] + colWidths[2] + 20, y: tableY - columnHeaderHeight, size: 14 });
+        const pdfBytes = await pdfDoc.save();
+
+        // Download PDF
+        link.download = `${userEmail}_history.pdf`;
+        link.click();
+      }
+    });
+  </script>
+
+
+
+  <script>
+    function toggleDrawer() {
+      var menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+    var menu = document.getElementById("menu");
+    var drawerBtn = document.querySelector(".drawer-btn");
+    function toggleDrawer() {
+      menu.classList.toggle("show");
+    }
+    function closeDrawer() {
+      menu.classList.remove("show");
+    }
+    document.addEventListener("click", function (event) {
+      var targetElement = event.target; // Clicked element
+      // Check if the clicked element is inside the drawer or the drawer button
+      var isDrawerElement = targetElement.closest("#menu") || targetElement.closest(".drawer-btn");
+
+      if (!isDrawerElement) {
+        closeDrawer(); // Close the drawer if the clicked element is outside
+      }
+    });
+  </script>
+</body>
+
+</html>

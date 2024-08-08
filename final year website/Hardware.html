@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+   <meta charset="UTF-8">
+   <title>Emissi Guard|Hardware</title>
+ <link rel="stylesheet" href="hardware.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <nav>
+
+    <div class="navbar">
+      <div class="logo">
+        <a href="#">
+          <div class="navbar-logo">
+            <img src="logo.png" alt="Logo">
+          </div>
+        </a>
+      </div>
+      <label class="lab1">Emissi Guard</label>
+      <div class="menu-icon" onclick="toggleDrawer()">
+        <button class="drawer-btn">
+          <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </button>
+      </div>
+      <ul class="menu" id="menu">
+        <div class="dropdown">
+          <li><a href="home.html">Home</a> </li>
+        </div>
+        <li><a href="plevel.html">Pollution-level</a> </li>
+        <li><a href="Instructions.html">E care</a></li>
+        <li><a href="About.html">About us</a></li>
+
+        <div class="dropdown">
+          <li><a href="">Login</a></li>
+          <div class="dropdown-content">
+            <a href="logu.html">User</a>
+            <a href="log.html">Admin</a>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </nav>
+  </div>
+  <div class="card">
+  <div class="perspective">
+      <label class="tab" for="tab-top">ESP 32</label>
+      <label class="tab" for="tab-front">Gas Sensors</label>
+      <label class="tab" for="tab-bottom">Jumper wires</label>
+      <label class="tab" for="tab-back">BreadBoard</label>
+      <input type="radio" name="tabs" id="tab-top">
+      <input type="radio" name="tabs" id="tab-front">
+      <input type="radio" name="tabs" id="tab-bottom"> 
+      <input type="radio" name="tabs" id="tab-back">
+      <div class="cube">
+        <div class="tab-content">
+                <img src="esp32.jpeg" id="ig1">
+        </div>
+         <div class="tab-content">
+            <img src="mq2.jpg" id="ig2">
+        </div>
+        <div class="tab-content">
+            <img src="jwires.jpeg" id="ig3">
+        </div>
+        <div class="tab-content">
+            <img src="breadboard.jpeg" id="ig4">
+          </div>
+    </div>
+    </div>
+    <div class="detail1" id="d1">
+      <h1 class="h1">Gas Sensors</h1>
+      <p class="p1"><br>Three kinds of gas sensors will be used:<br> MQ-2 for sensing Carbon Monoxide CO.<br> MQ-7 for sensing Nitrogen Oxides NOx.<br> MQ-135 for sensing Flammable gases.<br> These sensors will detect specific gases from the smoke of the vehicle and send the concentration to Arduino.</p></div>
+      <div class="detail2" id="d2">
+        <h1 class="h1">ESP 32</h1>
+      <p class="p2">ESP32 is the name of the chip that was developed by Espressif Systems. This provides Wi-Fi (and in some models) dual-mode Bluetooth connectivity to embedded devices. While ESP32 is technically just the chip, modules and development boards that contain this chip are often also referred to as “ESP32” by the manufacturer. It is responsible for collecting data from the gas sensors and then sending it to Firebase.</p>
+    </div>
+    <div class="detail3" id="d3">
+      <h1 class="h1">BreadBoard</h1>
+    <p class="p2">This breadboard is used to make common connection. To connect all sensors,esp 32. 
+A breadboard, solderless breadboard, or protoboard is a construction base used to build semi-permanent prototypes of electronic circuits. Unlike a perfboard or stripboard, breadboards do not require soldering or destruction of tracks and are hence reusable.</p>
+  </div>
+  <div class="detail4" id="d4">
+    <h1 class="h1">Jumper Wires</h1>
+  <p class="p2">umper wires are used for making connections between items on your breadboard and your esp 32's header pins. Use them to wire up all your circuits. Use to connect esp32 and gas sensors.</p>
+</div>
+    </div>
+  </div>
+  <div class="footerdaata">
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="About.html">About Us</a></li>
+              <li><a href="ourservices.html">our services</a></li>
+              <li><a href="Mission.html">Our mission</a></li>
+              <li><a href="Privacy.html">Privacy Policy</a></li>
+  
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="FAQ.html">FAQ</a></li>
+              <li><a href="Disclaimer.html">Disclaimer</a></li>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="plevel.html">Pollution-level</a></li>
+  
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Technologies</h4>
+            <ul>
+              <li><a href="Hardware.html">Hardware</a></li>
+              <li><a href="Software.html">software</a></li>
+              <li><a href="Languages.html">Languages</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+        <script>
+          function toggleDrawer() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+          }
+          var menu = document.getElementById("menu");
+          var drawerBtn = document.querySelector(".drawer-btn");
+          function toggleDrawer() {
+            menu.classList.toggle("show");
+          }
+          function closeDrawer() {
+            menu.classList.remove("show");
+          }
+          document.addEventListener("click", function (event) {
+            var targetElement = event.target; // Clicked element
+            // Check if the clicked element is inside the drawer or the drawer button
+            var isDrawerElement = targetElement.closest("#menu") || targetElement.closest(".drawer-btn");
+      
+            if (!isDrawerElement) {
+              closeDrawer(); // Close the drawer if the clicked element is outside
+            }
+          });
+
+
+          const buttonFront = document.querySelector('[for="tab-front"]');
+  const buttontop = document.querySelector('[for="tab-top"]');
+  const buttonbottom = document.querySelector('[for="tab-bottom"]');
+  const buttonback = document.querySelector('[for="tab-back"]');
+  const p1 = document.querySelector('.detail1');
+  const p2 = document.querySelector('.detail2');
+  const p3 = document.querySelector('.detail3');
+  const p4 = document.querySelector('.detail4');
+
+  buttontop.addEventListener('click', () => {
+    document.getElementById("d1").style.visibility="hidden";
+    document.getElementById("d3").style.visibility="hidden";
+    document.getElementById("d4").style.visibility="hidden";
+    document.getElementById("d2").style.visibility="visible";
+    p2.style.left = '0';
+    p1.style.left = '40%';
+    p3.style.left = '40%';
+    p4.style.left = '40%';
+  });
+  buttonFront.addEventListener('click', () => {
+    document.getElementById("d2").style.visibility="hidden";
+    document.getElementById("d3").style.visibility="hidden";
+    document.getElementById("d4").style.visibility="hidden";
+    document.getElementById("d1").style.visibility="visible";
+    p1.style.left = '0';
+    p2.style.left = '40%';
+    p3.style.left = '40%';
+    p4.style.left = '40%';
+  });
+  buttonbottom.addEventListener('click', () => {
+    document.getElementById("d2").style.visibility="hidden";
+    document.getElementById("d3").style.visibility="hidden";
+    document.getElementById("d1").style.visibility="hidden";
+    document.getElementById("d4").style.visibility="visible";
+    p1.style.left = '40%';
+    p2.style.left = '40%';
+    p4.style.left = '0';
+    p3.style.left = '40%';
+  });
+  buttonback.addEventListener('click', () => {
+    document.getElementById("d2").style.visibility="hidden";
+    document.getElementById("d4").style.visibility="hidden";
+    document.getElementById("d1").style.visibility="hidden";
+    document.getElementById("d3").style.visibility="visible";
+    p1.style.left = '40%';
+    p2.style.left = '40%';
+    p4.style.left = '40%';
+    p3.style.left = '0';
+  });
+
+        </script>
+  </body>
+  </html>

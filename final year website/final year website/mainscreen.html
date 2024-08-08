@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Emissi Guard  | Notification </title>
+    <link rel="stylesheet" href="main.css">
+
+    
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">Emissi Guard</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      
+
+      <li>
+        <a href="registeradmin.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Register</span>
+        </a>
+         <span class="tooltip">Register</span>
+      </li>
+      <li>
+       <a href="userComplaints.html">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">complain</span>
+       </a>
+       <span class="tooltip">complain</span>
+     </li>
+     <li>
+        <a href="datachangerequest.html">
+          <i class='bx bx-user' ></i>
+          <span class="links_name">Request data change</span>
+        </a>
+        <span class="tooltip">Request data change</span>
+      </li>
+     <li>
+       <a href="mainscreen.html">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">Mainscreen</span>
+       </a>
+       <span class="tooltip">Mainscreen</span>
+     </li>
+
+    </ul>
+  </div>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+
+<div>
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="#">
+          <div class="navbar-logo">
+            <img src="logo.png" alt="Logo">
+          </div>
+        </a>
+      </div>
+      <label class="lab1">Emissi Guard</label>
+      <div class="menu-icon" onclick="toggleDrawer()">
+        <button class="drawer-btn">
+          <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </button>
+      </div>
+      <ul class="menu">
+        <div class="dropdown"> 
+          <li><a href="home.html">Home</a> </li>
+            </div>
+            <li><a href="plevel.html">Pollution-level</a> </li>
+            <li><a href="Instructions.html">E care</a></li>
+            <li><a href="About.html">About us</a></li> 
+            <button id="logoutBtn">Logout</button>
+      </ul>
+    </div>
+  </nav>
+  </div>
+  <div class="container">
+    <h2>Users with High Notification Counts</h2>
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Notification Count</th>
+        </tr>
+      </thead>
+      <tbody id="userList"></tbody>
+    </table>
+  </div>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script>
+  firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // document.getElementById("adminEmail").innerText = user.email;
+        //updateNavigationBar(user.email);
+        loadUsersWithHighNotificationCounts();
+      } else {
+        // User is not signed in, redirect to login page
+        window.location.href = "log.html";
+      }
+    });
+
+  function loadUsersWithHighNotificationCounts() {
+  var userListElement = document.getElementById("userList");
+  var usersRef = firebase.database().ref("user_data");
+  usersRef.on("value", function (snapshot) {
+    var users = snapshot.val();
+    var userCount = 4;
+    for (var userId in users) {
+      var userData = users[userId];
+      if (userData.isAdmin) continue;
+      if (userData.notificationCount >= 3) {
+        userListElement.innerHTML += row;
+      }
+    }
+    if (userCount === 0) {
+      userListElement.innerHTML += emptyRow;
+    }
+    userRows.forEach(function (row) {
+      row.addEventListener("click", function () {
+        displayUserDetails(row.getAttribute("data-user-id"));
+      });
+    });
+  });
+}
+
+  
+  //function handleLogout() {
+
+   // document.getElementById("logout-btn").addEventListener("click", function() {
+   //   firebase.auth().signOut().then(function() {
+   //     window.location.href = "Login.html";
+    //  }).catch(function(error) {
+    //    console.log("Logout failed. Error: " + error.message);
+    //  });
+   // });
+  //  const userLink = document.getElementById("user-info");
+   // const loginLink = document.getElementById("login-link");
+   // const logoutLink = document.getElementById("logout-btn");
+   // userLink.innerHTML = ""; 
+   // loginLink.style.display = "block"; 
+  //  logoutLink.remove(); 
+  //}
+
+        document.getElementById("logoutBtn").addEventListener("click", function() {
+          firebase.auth().signOut().then(function() {
+            window.location.href = "log.html";
+          }).catch(function(error) {
+            console.log("Logout failed. Error: " + error.message);
+          });
+        });
+
+  function displayUserDetails(userId) {CSSMathValue.then(function (snapshot) {
+      var userDetails = snapshot.val();
+      if (userDetails) {
+        //console.log(userDetails)
+      }
+    })
+    .catch(function (error) {
+      console.log("Error fetching user details: " + error.message);
+    });
+  }
+function resetNotificationCount() {
+  var resetButton = document.getElementById("resetButton");
+  var userId = resetButton.getAttribute("data-user-id");
+  if (userId) {
+    usersRef.child(userId).update({ notificationCount: 0 })
+      .then(function () {
+
+        alert("Notification count reset to zero.");
+      })
+      .catch(function (error) {
+        console.log("Error updating notification count: " + error.message);
+      });
+  }
+}
+
+</script>
+
+
+</body>
+</html>
